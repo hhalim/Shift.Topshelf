@@ -36,9 +36,8 @@ namespace Shift.Topshelf
 
             config.ServerTimerInterval = Convert.ToInt32(ConfigurationManager.AppSettings["TimerInterval"]); //optional: default every 5 sec for getting jobs ready to run and run them
             config.ServerTimerInterval2 = Convert.ToInt32(ConfigurationManager.AppSettings["CleanUpTimerInterval"]); //optional: default every 10 sec for server CleanUp()
+
             //config.AutoDeleteStatus = new List<JobStatus?> { JobStatus.Completed, JobStatus.Error }; //Auto delete only the jobs that had Stopped or with Error
-            //config.UseCache = Convert.ToBoolean(ConfigurationManager.AppSettings["UseCache"]);
-            //config.CacheConfigurationString = ConfigurationManager.AppSettings["RedisConfiguration"];
             //config.EncryptionKey = ConfigurationManager.AppSettings["ShiftEncryptionParametersKey"];
             config.PollingOnce = Convert.ToBoolean(ConfigurationManager.AppSettings["PollingOnce"]);
 
